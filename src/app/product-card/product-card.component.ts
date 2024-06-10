@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
+  imgUrl = 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img';
   ProductName = 'A';
   SalesVolume = '500';
   ProductPrice = '$1,000';
