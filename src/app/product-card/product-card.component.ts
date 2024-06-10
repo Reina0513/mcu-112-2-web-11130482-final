@@ -12,4 +12,9 @@ export class ProductCardComponent {
   SalesVolume = '500';
   ProductPrice = '$1,000';
   SpecialOffer = '$800';
+  isShow = true;
+
+  onSetDisplay(isShow: boolean): void {
+    this.isShow = isShow;
+  }
 }
