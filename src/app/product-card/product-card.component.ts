@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.css',
 })
-export class ProductCardComponent {}
+export class ProductCardComponent {
+  ProductName = 'A';
+  SalesVolume = '500';
+  ProductPrice = '$1,000';
+  SpecialOffer = '$800';
+}
