@@ -5,8 +5,8 @@
 </div>
 <div>{{ SalesVolume }}</div>
 <div class="price">
-  <span>{{ ProductPrice }}</span>
-  <span>{{ SpecialOffer }}</span>
+  <span>{{ ProductPrice | currency }}</span>
+  <span>{{ SpecialOffer | currency }}</span>
 </div>
 <div class="button">
   <button type="button" (click)="onSetDisplay(true)">顯示</button>
