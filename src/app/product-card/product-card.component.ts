@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, numberAttribute } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './product-card.component.css',
 })
 export class ProductCardComponent {
-  imgUrl = 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img';
-  ProductName = 'A';
-  SalesVolume = '500';
-  ProductPrice = '$1,000';
-  SpecialOffer = '$800';
-  isShow = true;
+  @Input() ProductName!: string;
+  @Input() SalesVolume!: number;
+  @Input({ transform: numberAttribute }) ProductPrice!: number;
+  @Input({ transform: numberAttribute }) SpecialOffer!: number;
+  @Input() isShow!: boolean;
+  @Input() imgUrl!: string;
 
   onSetDisplay(isShow: boolean): void {
     this.isShow = isShow;

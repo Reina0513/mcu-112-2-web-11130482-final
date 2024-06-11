@@ -9,5 +9,10 @@ import { ProductCardComponent } from './product-card/product-card.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'mcu-112-2-web-11130482-final';
+  ProductName = 'A';
+  SalesVolume = 500;
+  ProductPrice = 1000;
+  SpecialOffer = 500;
+  isShow = true;
+  imgUrl = 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img';
 }
