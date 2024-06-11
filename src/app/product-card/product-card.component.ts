@@ -13,9 +13,9 @@ export class ProductCardComponent {
   @Input() SalesVolume!: number;
   @Input({ transform: numberAttribute }) ProductPrice!: number;
   @Input({ transform: numberAttribute }) SpecialOffer!: number;
-  @Input({ transform: booleanAttribute }) isShow!: boolean;
   @Input() imgUrl!: string;
 
+  @Input({ transform: booleanAttribute }) isShow!: boolean;
   @Output() isShowChange = new EventEmitter<boolean>();
 
   onSetDisplay(isShow: boolean): void {
