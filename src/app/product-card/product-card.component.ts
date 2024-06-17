@@ -25,4 +25,10 @@ export class ProductCardComponent {
   onSetDisplay(isShow: boolean): void {
     this.isShowChange.emit(isShow);
   }
+
+  @Output()
+  view = new EventEmitter<void>();
+
+  @Output()
+  add = new EventEmitter<void>();
 }
