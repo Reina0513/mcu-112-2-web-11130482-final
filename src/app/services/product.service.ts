@@ -32,7 +32,7 @@ export class ProductService {
     return of(product);
   }
 
-  getList(): Observable<Product[]> {
+  getList(name: string | undefined, pageIndex: number, pageSize: number): Observable<Product[]> {
     return of(this._data);
   }
 
@@ -47,5 +47,9 @@ export class ProductService {
     const product = this._data.find(({ id }) => productId === id)!;
     this._data = [...this._data.filter(({ id }) => productId !== id)];
     return of(product);
+  }
+
+  getCount(name?: string): Observable<number> {
+    throw new Error('NO');
   }
 }
