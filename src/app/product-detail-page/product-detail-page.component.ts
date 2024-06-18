@@ -1,23 +1,33 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, inject, Input, numberAttribute } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../model/product';
-import { ProductCardListComponent } from '../product-card-list/product-card-list.component';
 
 @Component({
   selector: 'app-product-detail-page',
   standalone: true,
-  imports: [CurrencyPipe, ProductCardListComponent],
+  imports: [CurrencyPipe],
   templateUrl: './product-detail-page.component.html',
   styleUrl: './product-detail-page.component.css',
 })
 export class ProductDetailPageComponent {
-  @Input({ transform: numberAttribute })
-  id!: number;
-  product!: Product;
-  router = inject(Router);
+  product = new Product({
+    id: 1,
+    ProductName: 'A',
+    SalesVolume: 500,
+    ProductPrice: 1000,
+    isShow: true,
+    imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+    createDate: new Date(),
+  });
 
-  onBack = () => {
-    this.router.navigate(['/products']);
-  };
+  private router = inject(Router);
+
+  onEdit(): void {
+    this.router.navigate(['product', 'form', this.product.id]);
+  }
+
+  onBack(): void {
+    this.router.navigate(['products']);
+  }
 }
