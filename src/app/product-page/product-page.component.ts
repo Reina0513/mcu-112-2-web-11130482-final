@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../model/product';
 import { ProductCardListComponent } from '../product-card-list/product-card-list.component';
-import { ProductService } from '../services/product.serve';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-page',
