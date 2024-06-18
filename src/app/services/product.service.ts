@@ -25,42 +25,6 @@ export class ProductService {
       imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
       createDate: new Date(),
     }),
-    new Product({
-      id: 3,
-      ProductName: 'C',
-      SalesVolume: 500,
-      ProductPrice: 1000,
-      isShow: true,
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
-      createDate: new Date(),
-    }),
-    new Product({
-      id: 4,
-      ProductName: 'D',
-      SalesVolume: 500,
-      ProductPrice: 1000,
-      isShow: true,
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
-      createDate: new Date(),
-    }),
-    new Product({
-      id: 5,
-      ProductName: 'D',
-      SalesVolume: 500,
-      ProductPrice: 1000,
-      isShow: true,
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
-      createDate: new Date(),
-    }),
-    new Product({
-      id: 6,
-      ProductName: 'D',
-      SalesVolume: 500,
-      ProductPrice: 1000,
-      isShow: true,
-      imgUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
-      createDate: new Date(),
-    }),
   ];
 
   getById(productId: number): Observable<Product> {

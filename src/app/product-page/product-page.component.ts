@@ -18,12 +18,10 @@ export class ProductPageComponent implements OnInit {
   private productService = inject(ProductService);
   private cartService = inject(CartService);
 
-  products!: Product[];
+  products: Product[] = [];
 
   ngOnInit(): void {
-    this.productService = new ProductService();
     this.productService.getList().subscribe((item) => (this.products = item));
-    console.log(this.products);
   }
 
   onView(product: Product): void {
