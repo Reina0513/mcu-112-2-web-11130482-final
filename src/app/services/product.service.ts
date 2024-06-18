@@ -78,4 +78,10 @@ export class ProductService {
     this._data = [...this._data, newProduct];
     return of(newProduct);
   }
+
+  remove(productId: number): Observable<Product> {
+    const product = this._data.find(({ id }) => productId === id)!;
+    this._data = [...this._data.filter(({ id }) => productId !== id)];
+    return of(product);
+  }
 }
