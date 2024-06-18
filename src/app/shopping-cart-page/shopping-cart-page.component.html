@@ -1,1 +1,14 @@
 <p>shopping-cart-page works!</p>
+
+@for(item of cartItem;track item.id){
+<div>
+  <span
+    >{{item.Product.ProductName}} <button (click)="onAdd(item.Product)">加</button> <button (click)="onRemove(item.Product)">減</button>
+  </span>
+  <span>{{ item.Quantity }}</span>
+</div>
+
+}
+<div>總金額{{cartService.getCartMoneyCount() }}</div>
+
+<button (click)="pay()">結帳</button>

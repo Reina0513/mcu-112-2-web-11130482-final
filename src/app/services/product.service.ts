@@ -44,7 +44,7 @@ export class ProductService {
       createDate: new Date(),
     }),
     new Product({
-      id: 4,
+      id: 5,
       ProductName: 'D',
       SalesVolume: 500,
       ProductPrice: 1000,
@@ -53,7 +53,7 @@ export class ProductService {
       createDate: new Date(),
     }),
     new Product({
-      id: 4,
+      id: 6,
       ProductName: 'D',
       SalesVolume: 500,
       ProductPrice: 1000,

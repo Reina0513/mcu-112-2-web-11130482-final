@@ -3,6 +3,7 @@ import { Component, Input, OnInit, inject, numberAttribute } from '@angular/core
 import { Router } from '@angular/router';
 import { Product } from '../model/product';
 import { ProductService } from '../services/product.service';
+import { CartService } from './../services/shopping-cart-service';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -20,9 +21,10 @@ export class ProductDetailPageComponent implements OnInit {
   private router = inject(Router);
 
   private productService = inject(ProductService);
+  private cartService = inject(CartService);
 
   ngOnInit(): void {
-    this.product = this.productService.getById(this.id);
+    this.productService.getById(this.id).subscribe((item) => (this.product = item));
   }
 
   onBack(): void {

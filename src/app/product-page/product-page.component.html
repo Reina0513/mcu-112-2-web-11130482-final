@@ -1,10 +1,9 @@
 <div>
   <div class="toolbar">
     <span>
-      <input type="text" placeholder="產品名稱" [formControl]="formControl" />
       <input type="text" placeholder="產品名稱" />
       <button type="button">查詢</button>
     </span>
   </div>
-  <app-product-card-list [products]="products" (view)="onView($event)"></app-product-card-list>
+  <app-product-card-list [products]="products" (add)="onAdd($event)" (view)="onView($event)"></app-product-card-list>
 </div>

@@ -8,20 +8,12 @@ import { ProductService } from './product.service';
   providedIn: 'root',
 })
 export class ProductRemoteService extends ProductService {
-  private readonly url = 'http://localhost:3000/products';
+  private readonly url = 'http://localhost:3000/Product';
 
   private readonly httpClient = inject(HttpClient);
 
   override getById(productId: number): Observable<Product> {
     return this.httpClient.get<Product>(`${this.url}/${productId}`);
-  }
-
-  override add(product: Product): Observable<Product> {
-    return this.httpClient.post<Product>(this.url, { ...product });
-  }
-
-  override remove(productId: number): Observable<Product> {
-    return this.httpClient.delete<Product>(`${this.url}/${productId}`);
   }
 
   override getList(): Observable<Product[]> {
